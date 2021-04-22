@@ -1,0 +1,14 @@
+CREATE DATABASE Usuarios;
+
+USE Usuarios;
+
+CREATE TABLE Usuario(
+    -> id TINYINT AUTO_INCREMENT NOT NULL,
+    -> nombre CHAR(20) NOT NULL,
+    -> paterno CHAR(20) NOT NULL,
+    -> materno CHAR(20) NOT NULL,
+    -> PRIMARY KEY(id));
+    
+INSERT INTO Usuario(nombre,paterno,materno) VALUES('Miguel Angel', 'Murga', 'Dionicio');
+
+

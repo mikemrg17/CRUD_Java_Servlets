@@ -13,26 +13,27 @@ import javax.servlet.http.HttpServletResponse;
 public class ServletInsertar extends HttpServlet 
 {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
     String nombre = request.getParameter("nombre");
-    String paterno = request.getParameter("paterno");   
+    String paterno = request.getParameter("paterno");  
+    String materno = request.getParameter("materno");
     try
     {
     Class.forName("com.mysql.jdbc.Driver");
-    Connection db = DriverManager.getConnection("jdbc:mysql://localhost/Usuarios","root", "2312");
+    Connection db = DriverManager.getConnection("jdbc:mysql://localhost/usuarios","root", "1234");
     Statement s = db.createStatement();        
-    s.executeUpdate("INSERT INTO Usuario(nombre,paterno) VALUES('"+nombre+"','"+paterno+"');");
+    s.executeUpdate("INSERT INTO Usuario(nombre,paterno,materno) VALUES('"+nombre+"','"+paterno+"','"+materno+"');");
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Servlet</title>");            
+            out.println("<title>Servlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Uusuario creado</h1>");
+            out.println("<h1>Usuario creado</h1>");
             out.println("</body>");
             out.println("</html>");  
     }

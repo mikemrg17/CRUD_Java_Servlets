@@ -1,0 +1,48 @@
+*{
+  margin: 120;
+  padding: 120;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Calibri; 
+}
+
+.styleform {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  font-family: Calibri;
+  color: white;
+  border: solid black 2px;
+}
+
+.controls {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid green;
+  font-family: Calibri;
+  font-size: 18px;
+  color: black;
+}
+
+.styleform p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.styleform .botons {
+  width: 100%;
+  background: green;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}

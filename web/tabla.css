@@ -1,0 +1,32 @@
+body{
+	font-family: Calibri; 
+}
+
+table{
+	background-color: white;
+	border-collapse: collapse;
+}
+
+th{
+	text-align: center;
+	border: solid black 2px;
+	padding: 10px;
+	margin-left: : 10px;
+
+}
+
+td{
+	text-align: left;
+	border: solid black 2px;
+	padding: 20px;
+}
+
+.thead{
+	background-color: green;
+	border-bottom: solid 5px black;
+	color:  white;
+}
+
+#div2{
+	margin-bottom: 10px;
+}

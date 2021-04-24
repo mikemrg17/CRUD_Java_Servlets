@@ -16,6 +16,14 @@
         <servlet-name>ServletInsertar</servlet-name>
         <servlet-class>paquete.ServletInsertar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditarUsuario</servlet-name>
+        <servlet-class>paquete.EditarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditarServlet</servlet-name>
+        <servlet-class>paquete.EditarServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servlet1</servlet-name>
         <url-pattern>/Servlet1</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>ServletInsertar</servlet-name>
         <url-pattern>/ServletInsertar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditarUsuario</servlet-name>
+        <url-pattern>/EditarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditarServlet</servlet-name>
+        <url-pattern>/EditarServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

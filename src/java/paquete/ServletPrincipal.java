@@ -75,7 +75,7 @@ public class ServletPrincipal extends HttpServlet
                     out.println("<tr>");
                     out.println("<td><b>"+rs.getString("nombre")+"</b></td>");
                     out.println("<td><a href=\"read.html\"><b>Leer registro usuario</b></a></td>");
-                    out.println("<td><a href=\"update.html\"><b>Modificar usuario</b></a></td>");
+                    out.println("<td><a href='EditarUsuario?id=" + rs.getString("id") + "'><b>Modificar usuario</b></a></td>");
                     out.println("<td><a href=\"delete.html\"><b>Eliminar usuario</b></a></td>");
                     out.println("</tr>");
                 }

@@ -51,27 +51,4 @@ public class DBConnection {
             System.out.println("No se pudo desconectar de BD" + ex.getMessage());
         }
     }
-    /*
-    public Boolean validateUser(String usernameToValidate, String passwordToValidate){
-        //String url = "jdbc:mysql://localhost:3306/Usuarios";
-        String sql = "SELECT * FROM user WHERE username='" + usernameToValidate + "' AND " + "password='" + passwordToValidate + "'";
-        try{
-            Class.forName("com.mysql.jdbc.Driver"); 
-            Connection con = DriverManager.getConnection(url,username,password);
-            System.out.println("Successfully connected to DB");
-            Statement state = con.createStatement();
-            ResultSet rs = state.executeQuery(sql);
-            rs.next();
-            System.out.println("Usuario " + rs.getString(2) + " encontrado!");
-            con.close();  
-            return true;
-        }catch(SQLException e){
-            System.out.println("Error");
-            e.printStackTrace();
-            return false;
-        }catch(ClassNotFoundException e){
-            e.printStackTrace();
-            return false;
-        }
-    */
 }

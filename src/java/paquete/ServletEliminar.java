@@ -7,13 +7,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-public class LeerUsuario extends HttpServlet {
+public class ServletEliminar extends HttpServlet {
 
     DBConnection conexion = new DBConnection();
     PreparedStatement statement;
@@ -31,34 +30,20 @@ public class LeerUsuario extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         try {
-            statement = conexion.con.prepareStatement("SELECT * FROM Usuario WHERE id = ?");
+            statement = conexion.con.prepareStatement("DELETE FROM Usuario WHERE id = ?");
             statement.setString(1,idUsuario);
-            rs = statement.executeQuery();
+            row = statement.executeUpdate();
             
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
-                out.println("<title>Leer usuario</title>");  
-                out.println("<meta http-equiv=\"refresh\" content=\"5; URL=http://localhost:8080/CRUD_Java_Servlets/ServletPrincipal\" />");
+                out.println("<title>Eliminar usuario</title>");            
                 out.println("<link rel=\"stylesheet\" href=\"create.css\">");
                 out.println("<link rel=\"icon\" href=\"Imagenes/CRUD.ico\">");
+                out.println("<meta http-equiv=\"refresh\" content=\"1; URL=http://localhost:8080/CRUD_Java_Servlets/ServletPrincipal\" />");      
                 out.println("</head>");
                 out.println("<body>");
-                out.println("<div id=\"div1\">");
-                out.println("<center>");
-                out.println("<h1>Leer USUARIO</h1>");
-                out.println("</center>");
-                out.println("</div>");
-                out.println("<div id=\"div2\">");
-                out.println("<center>");
-                out.println("<form class=\"styleform\">");
-                out.println("<input class=\"controls\" type=\"text\" name=\"idEditado\" id=\"idEditado\" value='"+ rs.getString("id") +"' readonly>");
-                out.println("<input class=\"controls\" type=\"text\" name=\"nombreEditado\" id=\"nombreEditado\" value='"+ rs.getString("nombre") +"' readonly>");
-                out.println("<input class=\"controls\" type=\"text\" name=\"paternoEditado\" id=\"paternoEditado\" value='"+ rs.getString("paterno") +"' readonly>");
-                out.println("<input class=\"controls\" type=\"text\" name=\"maternoEditado\" id=\"maternoEditado\" value='"+ rs.getString("materno") +"' readonly>");
-                out.println("</form>");
-                out.println("</center>");
-                out.println("</div>");
+                out.println("<h1>Usuario eliminado</h1>");
                 out.println("</body>");
                 out.println("</html>");
             
@@ -67,6 +52,8 @@ public class LeerUsuario extends HttpServlet {
             
         } catch (SQLException ex) {
             System.out.println("No se pudo ejecutar el query" + ex.getMessage());
+        }finally{
+            conexion.desconectarDeBD();
         }
        
         

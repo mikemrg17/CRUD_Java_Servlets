@@ -68,6 +68,8 @@ public class EditarUsuario extends HttpServlet {
             
         } catch (SQLException ex) {
             System.out.println("No se pudo ejecutar el query" + ex.getMessage());
+        }finally{
+            conexion.desconectarDeBD();
         }
        
         

@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 public class DBConnection {
     static String driver = "com.mysql.jdbc.Driver"; 
     static String url = "jdbc:mysql://localhost:3306/Usuarios";
-    static String username = "root";
+    static String username = "miguel";
     static String password = "1234";
     
     protected Connection con = null;

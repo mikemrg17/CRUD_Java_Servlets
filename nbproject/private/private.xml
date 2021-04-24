@@ -3,7 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/axel_/Documents/ADOO/Tarea%207%20CRUD/CRUD_Java_Servlets/web/index.html</file>
+            <file>file:/home/miguel/Documents/Migue/Migue/IPN/ESCOM/Cuarto%20Semestre/AnalisisOrientadoAObjetos/Tareas/Tarea7/CRUD_Java_Servlets/src/java/paquete/EditarUsuario.java</file>
+            <file>file:/home/miguel/Documents/Migue/Migue/IPN/ESCOM/Cuarto%20Semestre/AnalisisOrientadoAObjetos/Tareas/Tarea7/CRUD_Java_Servlets/src/java/paquete/LeerUsuario.java</file>
+            <file>file:/home/miguel/Documents/Migue/Migue/IPN/ESCOM/Cuarto%20Semestre/AnalisisOrientadoAObjetos/Tareas/Tarea7/CRUD_Java_Servlets/src/java/paquete/EditarServlet.java</file>
+            <file>file:/home/miguel/Documents/Migue/Migue/IPN/ESCOM/Cuarto%20Semestre/AnalisisOrientadoAObjetos/Tareas/Tarea7/CRUD_Java_Servlets/src/java/paquete/ServletInsertar.java</file>
+            <file>file:/home/miguel/Documents/Migue/Migue/IPN/ESCOM/Cuarto%20Semestre/AnalisisOrientadoAObjetos/Tareas/Tarea7/CRUD_Java_Servlets/src/java/paquete/ServletPrincipal.java</file>
+            <file>file:/home/miguel/Documents/Migue/Migue/IPN/ESCOM/Cuarto%20Semestre/AnalisisOrientadoAObjetos/Tareas/Tarea7/CRUD_Java_Servlets/src/java/paquete/DBConnection.java</file>
+            <file>file:/home/miguel/Documents/Migue/Migue/IPN/ESCOM/Cuarto%20Semestre/AnalisisOrientadoAObjetos/Tareas/Tarea7/CRUD_Java_Servlets/web/CRUD.html</file>
+            <file>file:/home/miguel/Documents/Migue/Migue/IPN/ESCOM/Cuarto%20Semestre/AnalisisOrientadoAObjetos/Tareas/Tarea7/CRUD_Java_Servlets/src/java/paquete/ServletCrear.java</file>
         </group>
     </open-files>
 </project-private>

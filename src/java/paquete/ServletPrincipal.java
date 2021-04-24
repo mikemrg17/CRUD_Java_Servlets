@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//@WebServlet("/ServletPrincipal")
+@WebServlet("/LeerUsuario")
 public class ServletPrincipal extends HttpServlet 
 {
     DBConnection conexion = new DBConnection();
@@ -74,9 +74,9 @@ public class ServletPrincipal extends HttpServlet
                 while(rs.next()){
                     out.println("<tr>");
                     out.println("<td><b>"+rs.getString("nombre")+"</b></td>");
-                    out.println("<td><a href=\"read.html\"><b>Leer registro usuario</b></a></td>");
+                    out.println("<td><a href='LeerUsuario?id="+rs.getString("id")+"'><b>Leer usuario</b></a></td>");
                     out.println("<td><a href='EditarUsuario?id=" + rs.getString("id") + "'><b>Modificar usuario</b></a></td>");
-                    out.println("<td><a href=\"delete.html\"><b>Eliminar usuario</b></a></td>");
+                    out.println("<td><a href='ServletEliminar?id="+rs.getString("id")+"'><b>Eliminar usuario</b></a></td>");
                     out.println("</tr>");
                 }
             } catch (SQLException ex) {

@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +14,12 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ServletInsertar extends HttpServlet 
 {
+    DBConnection conexion = new DBConnection();
+    PreparedStatement statement;
+    ResultSet rs;
+    int row;
+    
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
@@ -21,9 +29,8 @@ public class ServletInsertar extends HttpServlet
     String materno = request.getParameter("materno");
     try
     {
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection db = DriverManager.getConnection("jdbc:mysql://localhost/Usuarios","miguel", "1234");
-    Statement s = db.createStatement();        
+    conexion.conectarBD();
+    Statement s = conexion.con.createStatement();        
     s.executeUpdate("INSERT INTO Usuario(nombre,paterno,materno) VALUES('"+nombre+"','"+paterno+"','"+materno+"');");
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();

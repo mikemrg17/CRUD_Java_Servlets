@@ -22,7 +22,7 @@ public class ServletInsertar extends HttpServlet
     try
     {
     Class.forName("com.mysql.jdbc.Driver");
-    Connection db = DriverManager.getConnection("jdbc:mysql://localhost/Usuarios","root", "1234");
+    Connection db = DriverManager.getConnection("jdbc:mysql://localhost/Usuarios","miguel", "1234");
     Statement s = db.createStatement();        
     s.executeUpdate("INSERT INTO Usuario(nombre,paterno,materno) VALUES('"+nombre+"','"+paterno+"','"+materno+"');");
         response.setContentType("text/html;charset=UTF-8");
@@ -30,7 +30,8 @@ public class ServletInsertar extends HttpServlet
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet</title>");            
+            out.println("<title>Servlet</title>");
+            out.println("<meta http-equiv=\"refresh\" content=\"1; URL=http://localhost:8080/CRUD_Java_Servlets/ServletPrincipal\" />");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Usuario creado</h1>");

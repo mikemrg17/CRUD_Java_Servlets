@@ -22,7 +22,7 @@ public class ServletInsertar extends HttpServlet
     try
     {
     Class.forName("com.mysql.jdbc.Driver");
-    Connection db = DriverManager.getConnection("jdbc:mysql://localhost/Usuarios","miguel", "1234");
+    Connection db = DriverManager.getConnection("jdbc:mysql://localhost/Usuarios","root", "1234");
     Statement s = db.createStatement();        
     s.executeUpdate("INSERT INTO Usuario(nombre,paterno,materno) VALUES('"+nombre+"','"+paterno+"','"+materno+"');");
         response.setContentType("text/html;charset=UTF-8");

@@ -28,6 +28,10 @@
         <servlet-name>ServletEliminar</servlet-name>
         <servlet-class>paquete.ServletEliminar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LeerUsuario</servlet-name>
+        <servlet-class>paquete.LeerUsuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servlet1</servlet-name>
         <url-pattern>/Servlet1</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>ServletEliminar</servlet-name>
         <url-pattern>/ServletEliminar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LeerUsuario</servlet-name>
+        <url-pattern>/LeerUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

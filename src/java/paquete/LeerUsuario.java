@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -35,32 +34,34 @@ public class LeerUsuario extends HttpServlet {
             statement.setString(1,idUsuario);
             rs = statement.executeQuery();
             
+            while(rs.next()){
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
-                out.println("<title>Leer usuario</title>");  
-                out.println("<meta http-equiv=\"refresh\" content=\"5; URL=http://localhost:8080/CRUD_Java_Servlets/ServletPrincipal\" />");
+                out.println("<title>Editar usuario</title>");            
                 out.println("<link rel=\"stylesheet\" href=\"create.css\">");
                 out.println("<link rel=\"icon\" href=\"Imagenes/CRUD.ico\">");
                 out.println("</head>");
                 out.println("<body>");
                 out.println("<div id=\"div1\">");
                 out.println("<center>");
-                out.println("<h1>Leer USUARIO</h1>");
+                out.println("<h1>EDITAR USUARIO</h1>");
                 out.println("</center>");
                 out.println("</div>");
                 out.println("<div id=\"div2\">");
                 out.println("<center>");
-                out.println("<form class=\"styleform\">");
+                out.println("<form class=\"styleform\" method=\"get\" action=\"ServletPrincipal\">");
                 out.println("<input class=\"controls\" type=\"text\" name=\"idEditado\" id=\"idEditado\" value='"+ rs.getString("id") +"' readonly>");
                 out.println("<input class=\"controls\" type=\"text\" name=\"nombreEditado\" id=\"nombreEditado\" value='"+ rs.getString("nombre") +"' readonly>");
                 out.println("<input class=\"controls\" type=\"text\" name=\"paternoEditado\" id=\"paternoEditado\" value='"+ rs.getString("paterno") +"' readonly>");
                 out.println("<input class=\"controls\" type=\"text\" name=\"maternoEditado\" id=\"maternoEditado\" value='"+ rs.getString("materno") +"' readonly>");
+                out.println("<input class=\"botons\" type=\"submit\" value=\"Regresar\">");
                 out.println("</form>");
                 out.println("</center>");
                 out.println("</div>");
                 out.println("</body>");
                 out.println("</html>");
+            }
             
             
             
